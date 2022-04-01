@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2022 at 07:23 PM
+-- Generation Time: Apr 01, 2022 at 10:07 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -69,8 +69,8 @@ INSERT INTO `akun` (`id_akun`, `nama_akun`, `stok_akun`, `gambar_akun`, `platfor
 (11, 'Akun ML Spek GG', 1, 'ml7.jpg', 'Mobile', 210000, 8),
 (14, 'Akun EPEP CR 32 Epas 22', 1, 'ff2.jpg', 'Mobile', 450000, 9),
 (15, 'Akun EPEP Sg janda X S8', 1, 'ff3.jpg', 'Mobile', 300000, 9),
-(16, '2 Akun DLS Take All 110', 1, 'dls1.jpg', 'Mobile', 110000, 11),
-(17, 'Akun DLS Biasa aja kata Lemon', 1, 'dls2.jpg', 'Mobile', 60000, 11);
+(16, '2 Akun Pes Take All 110', 1, 'dls1.jpg', 'Mobile', 110000, 11),
+(17, 'Akun Pes Spek Biasa', 1, 'dls2.jpg', 'Mobile', 60000, 11);
 
 -- --------------------------------------------------------
 
@@ -84,30 +84,6 @@ CREATE TABLE `customer` (
   `telp_customer` varchar(15) NOT NULL,
   `catatan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `customer`
---
-
-INSERT INTO `customer` (`id_customer`, `nama_customer`, `telp_customer`, `catatan`) VALUES
-(71, 'bebas', '324141', 'ok'),
-(72, 'Izumi Fod', '23412432 ', 'hyyhyh'),
-(73, 'erfwe', '342', 'dfs'),
-(74, 'Izumi Fod', '8218738791313', 'Rahasia'),
-(75, 'Izumi Fod', '8218738791313', 'Rahasia'),
-(76, 'Izumi Fod', '8218738791313', 'Rahasia'),
-(77, 'Izumi Fod', '8218738791313', 'Rahasia'),
-(78, 'Izumi Fod', '8218738791313', 'Rahasia'),
-(79, 'Izumi Fod', '8218738791313', 'Rahasia'),
-(80, 'Izumi Fod', '8218738791313', 'Rahasia'),
-(81, 'Izumi Fod', '8218738791313', 'Rahasia'),
-(82, 'Izumi Fod', '8218738791313', 'Rahasia'),
-(83, 'Izumi Fod', '8218738791313', 'Rahasia'),
-(84, 'Izumi Fod', '8218738791313', 'Rahasia'),
-(85, 'Izumi Fod', '8218738791313', 'Rahasia'),
-(86, 'Izumi Fod', '8218738791313', 'Rahasia'),
-(87, 'Izumi Fod', '8218738791313', 'Rahasia'),
-(88, 'vb ', '324141', 'fgsf');
 
 -- --------------------------------------------------------
 
@@ -128,7 +104,7 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
 (8, 'Mobile Legend'),
 (9, 'Free Fire'),
 (10, 'Pubg Mobile'),
-(11, 'Dream League Soccer'),
+(11, 'Pes Mobile'),
 (12, 'High Domino'),
 (13, 'Genshin Impact');
 
@@ -146,30 +122,6 @@ CREATE TABLE `penjualan` (
   `id_customer` int(5) NOT NULL,
   `jumlah` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `penjualan`
---
-
-INSERT INTO `penjualan` (`id_penjualan`, `tgl_penjualan`, `qty_penjualan`, `id_akun`, `id_customer`, `jumlah`) VALUES
-(51, '2022-03-25 10:12:36', 1, 17, 71, ''),
-(52, '2022-03-25 10:13:48', 1, 16, 72, ''),
-(53, '2022-03-25 10:15:13', 1, 16, 73, ''),
-(54, '2022-03-25 10:19:22', 1, 16, 74, ''),
-(55, '2022-03-25 10:20:42', 1, 16, 75, ''),
-(56, '2022-03-25 10:20:43', 1, 16, 76, ''),
-(57, '2022-03-25 10:20:44', 1, 16, 77, ''),
-(58, '2022-03-25 10:21:24', 1, 16, 78, ''),
-(59, '2022-03-25 10:21:45', 1, 16, 79, ''),
-(60, '2022-03-25 10:22:05', 1, 16, 80, ''),
-(61, '2022-03-25 10:23:52', 1, 16, 81, ''),
-(62, '2022-03-25 10:25:43', 1, 16, 82, ''),
-(63, '2022-03-25 10:25:47', 1, 16, 83, ''),
-(64, '2022-03-25 10:25:59', 1, 16, 84, ''),
-(65, '2022-03-25 10:26:50', 1, 16, 85, ''),
-(66, '2022-03-25 10:27:16', 1, 16, 86, ''),
-(67, '2022-03-25 10:30:50', 1, 16, 87, ''),
-(68, '2022-03-25 10:39:22', 1, 17, 88, '');
 
 --
 -- Indexes for dumped tables
@@ -228,7 +180,7 @@ ALTER TABLE `akun`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id_customer` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+  MODIFY `id_customer` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
 
 --
 -- AUTO_INCREMENT for table `kategori`
@@ -240,7 +192,7 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `penjualan`
 --
 ALTER TABLE `penjualan`
-  MODIFY `id_penjualan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id_penjualan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- Constraints for dumped tables
@@ -263,3 +215,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
